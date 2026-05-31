@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Mshukiwa — a Kenyan-flavoured social deduction party game. Download on Google Play. App Store coming soon."
+    />
+    <meta name="theme-color" content="#16082e" />
+    <title>Mshukiwa — Kenyan party game</title>
+    <link rel="icon" type="image/png" href="assets/app-icon.png" />
+    <link rel="apple-touch-icon" href="assets/app-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta property="og:title" content="Mshukiwa — Kenyan party game" />
+    <meta
+      property="og:description"
+      content="Find the imposter. Kenyan-flavoured words, local vibes, pure chaos with friends."
+    />
+    <meta property="og:image" content="assets/app-icon.png" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <canvas id="particle-canvas" class="particle-canvas" aria-hidden="true"></canvas>
+
+    <div class="anti-grav-scene" aria-hidden="true">
+      <div class="orb orb--1 float" data-parallax="0.04" data-base-transform=""></div>
+      <div class="orb orb--2 float float--slow" data-parallax="0.06" data-base-transform=""></div>
+      <div class="orb orb--3 float float--reverse" data-parallax="0.03" data-base-transform=""></div>
+      <div class="orb orb--4 float float--delay" data-parallax="0.05" data-base-transform=""></div>
+      <div class="shard shard--1 float float--slow" data-parallax="0.08" data-base-transform=""></div>
+      <div class="shard shard--2 float float--reverse" data-parallax="0.07" data-base-transform=""></div>
+      <div class="ring ring--1 spin" data-parallax="0.02" data-base-transform=""></div>
+    </div>
+
+    <div class="bg" aria-hidden="true"></div>
+
+    <div class="page">
+      <header class="site-header glass">
+        <a class="brand" href="index.html">
+          <img class="brand__icon" src="assets/app-icon.png" width="40" height="40" alt="" />
+          <span class="brand__name">Mshukiwa</span>
+        </a>
+        <a class="nav-link" href="privacy-policy.html">Privacy</a>
+      </header>
+
+      <section class="hero">
+        <div class="hero__visual">
+          <div class="hero__orbit" aria-hidden="true">
+            <span class="hero__orbit-dot hero__orbit-dot--1"></span>
+            <span class="hero__orbit-dot hero__orbit-dot--2"></span>
+            <span class="hero__orbit-dot hero__orbit-dot--3"></span>
+          </div>
+          <div class="hero__icon-wrap float-hero">
+            <div class="hero__icon-glow" aria-hidden="true"></div>
+            <div class="hero__icon-ring" aria-hidden="true"></div>
+            <img
+              class="hero__icon"
+              src="assets/app-icon.png"
+              width="240"
+              height="240"
+              alt="Mshukiwa app icon"
+            />
+          </div>
+        </div>
+
+        <div class="hero__content reveal">
+          <p class="hero__eyebrow">
+            <img class="hero__eyebrow-flag" src="assets/icons/flag-ke.svg" width="20" height="20" alt="" />
+            Kenyan party game
+          </p>
+          <h1 class="hero__title">
+            <span class="hero__title-glow">Mshukiwa</span>
+          </h1>
+          <p class="hero__tagline">
+            Most players get a secret word. One imposter must blend in. Discuss, accuse, vote and
+            find out who is faking it.
+          </p>
+
+          <div class="store-badges" id="store-buttons">
+            <a
+              class="store-badge store-badge--play"
+              data-play-store
+              href="https://play.google.com/store/apps/details?id=com.techheart.mshukiwa"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Get Mshukiwa on Google Play"
+            >
+              <img
+                src="assets/google-play-badge.png"
+                width="180"
+                height="53"
+                alt="Get it on Google Play"
+              />
+            </a>
+
+            <div class="store-badge store-badge--apple store-badge--disabled" id="app-store-wrap">
+              <span class="badge-soon">Coming soon</span>
+              <a
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                aria-label="Download on the App Store — coming soon"
+              >
+                <img
+                  src="assets/app-store-badge.svg"
+                  width="160"
+                  height="53"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="section-title reveal">Why you'll love it</h2>
+      <div class="features">
+        <article class="feature-card float-card reveal" style="--float-delay: 0s">
+          <div class="feature-card__icon feature-card__icon--flag">
+            <img src="assets/icons/flag-ke.svg" width="28" height="28" alt="" />
+          </div>
+          <h3>Kenyan flavour</h3>
+          <p>Word lists and vibes rooted in local culture — perfect for game nights with friends and family.</p>
+        </article>
+        <article class="feature-card float-card reveal" style="--float-delay: 0.4s">
+          <div class="feature-card__icon">
+            <img src="assets/icons/detective.svg" width="32" height="32" alt="" />
+          </div>
+          <h3>Social deduction</h3>
+          <p>Everyone gets clues except the imposter. Bluff, observe, and vote before time runs out.</p>
+        </article>
+        <article class="feature-card float-card reveal" style="--float-delay: 0.8s">
+          <div class="feature-card__icon">
+            <img src="assets/icons/users.svg" width="32" height="32" alt="" />
+          </div>
+          <h3>Play together</h3>
+          <p>Pass and play on one phone or jump into online rooms when you want a bigger crew.</p>
+        </article>
+      </div>
+
+      <section class="onboarding reveal" id="how-to-play" aria-label="How to play onboarding">
+        <div class="onboarding__intro">
+          <p class="onboarding__eyebrow">New here?</p>
+          <h2 class="onboarding__title">How to play</h2>
+          <p class="onboarding__subtitle">Swipe through three quick screens — just like opening the app for the first time.</p>
+        </div>
+
+        <div class="onboarding__shell glass">
+          <div class="onboarding__phone-notch" aria-hidden="true"></div>
+
+          <div class="onboarding__top">
+            <span class="onboarding__counter">01 / 03</span>
+            <div class="onboarding__progress" role="progressbar" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+              <div class="onboarding__progress-fill"></div>
+            </div>
+          </div>
+
+          <div class="onboarding__viewport">
+            <div class="onboarding__track">
+              <article class="onboarding__slide onboarding__slide--active" data-index="0" aria-hidden="false">
+                <div class="onboarding__art float-hero">
+                  <div class="onboarding__art-glow onboarding__art-glow--violet" aria-hidden="true"></div>
+                  <img src="assets/onboarding/step-1.svg" width="140" height="140" alt="" />
+                </div>
+                <span class="onboarding__step-label">Step 1</span>
+                <h3 class="onboarding__slide-title">Get your word</h3>
+                <p class="onboarding__slide-text">
+                  Most players see the secret word. Imposters get nothing — they have to improvise.
+                </p>
+              </article>
+
+              <article class="onboarding__slide" data-index="1" aria-hidden="true">
+                <div class="onboarding__art float-hero">
+                  <div class="onboarding__art-glow onboarding__art-glow--blue" aria-hidden="true"></div>
+                  <img src="assets/onboarding/step-2.svg" width="140" height="140" alt="" />
+                </div>
+                <span class="onboarding__step-label">Step 2</span>
+                <h3 class="onboarding__slide-title">Discuss &amp; defend</h3>
+                <p class="onboarding__slide-text">
+                  Take turns giving hints. Watch who sounds too vague or too confident.
+                </p>
+              </article>
+
+              <article class="onboarding__slide" data-index="2" aria-hidden="true">
+                <div class="onboarding__art float-hero">
+                  <div class="onboarding__art-glow onboarding__art-glow--purple" aria-hidden="true"></div>
+                  <img src="assets/onboarding/step-3.svg" width="140" height="140" alt="" />
+                </div>
+                <span class="onboarding__step-label">Step 3</span>
+                <h3 class="onboarding__slide-title">Vote them out</h3>
+                <p class="onboarding__slide-text">
+                  Accuse, debate, and vote. Did you catch the mshukiwa or eject an innocent?
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="onboarding__dots" role="tablist" aria-label="Onboarding steps">
+            <button type="button" class="onboarding__dot onboarding__dot--active" aria-selected="true" aria-label="Step 1"></button>
+            <button type="button" class="onboarding__dot" aria-selected="false" aria-label="Step 2"></button>
+            <button type="button" class="onboarding__dot" aria-selected="false" aria-label="Step 3"></button>
+          </div>
+
+          <div class="onboarding__nav">
+            <button type="button" class="onboarding__btn onboarding__btn--back" disabled>Back</button>
+            <button type="button" class="onboarding__btn onboarding__btn--next">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta glass reveal">
+        <h2>Ready to play?</h2>
+        <p>Grab Mshukiwa on Android today. iOS is on the way.</p>
+        <div class="store-badges store-badges--center">
+          <a
+            class="store-badge store-badge--play"
+            data-play-store
+            href="https://play.google.com/store/apps/details?id=com.techheart.mshukiwa"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Get Mshukiwa on Google Play"
+          >
+            <img
+              src="assets/google-play-badge.png"
+              width="180"
+              height="53"
+              alt="Get it on Google Play"
+            />
+          </a>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          ·
+          <a href="mailto:infotechheart254@gmail.com">Contact</a>
+        </p>
+        <p class="powered">Powered by Tech Heart Games</p>
+        <p>&copy; <span id="year"></span> Tech Heart. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="site-config.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/onboarding.js"></script>
+    <script src="js/effects.js"></script>
+  </body>
+</html>
