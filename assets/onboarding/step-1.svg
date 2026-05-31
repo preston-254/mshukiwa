@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="40" y1="20" x2="120" y2="140">
+      <stop stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#173a8f"/>
+    </linearGradient>
+    <radialGradient id="gl1" cx="80" cy="80" r="60">
+      <stop stop-color="#c4b5fd" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#c4b5fd" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="80" cy="80" r="58" fill="url(#gl1)"/>
+  <rect x="48" y="42" width="64" height="76" rx="10" fill="rgba(16,8,24,0.6)" stroke="url(#g1)" stroke-width="2.5"/>
+  <rect x="56" y="58" width="48" height="10" rx="3" fill="#3d6fd4" opacity="0.5"/>
+  <rect x="56" y="74" width="36" height="8" rx="2" fill="#c4b5fd" opacity="0.35"/>
+  <rect x="56" y="88" width="42" height="8" rx="2" fill="#c4b5fd" opacity="0.25"/>
+  <text x="80" y="108" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="22" font-weight="700">???</text>
+  <circle cx="118" cy="48" r="14" fill="#7c3aed" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="118" y="53" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">?</text>
+</svg>
