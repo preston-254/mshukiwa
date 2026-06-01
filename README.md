@@ -64,6 +64,24 @@ Use your hosted privacy policy URL in Google Play:
 
 Example: `https://yourdomain.com/privacy-policy.html`
 
+### AdMob app-ads.txt (required for ad verification)
+
+Upload `app-ads.txt` from this folder to the **root** of the same domain you set as your **Developer website** in Google Play Console (**Store settings → Store listing contact details → Website**).
+
+The file must be reachable at:
+
+`https://yourdomain.com/app-ads.txt`
+
+Current contents (publisher ID from your AdMob account):
+
+```
+google.com, pub-4688202910099181, DIRECT, f08c47fec0942fa0
+```
+
+After deploying, open AdMob → **Apps → Mshukiwa (Android) → app-ads.txt** and click **Check for updates**. Crawling can take a few minutes (sometimes up to 24 hours).
+
+The domain in Play Console must **exactly** match where you host this file (including `www` vs non-`www`).
+
 ## Extract / move elsewhere
 
 Zip this folder and move it out of the game project:
